@@ -34,12 +34,15 @@ namespace ScreenProtect
             // 
             // InstructionsLabel
             // 
-            this.InstructionsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InstructionsLabel.BackColor = System.Drawing.Color.Black;
+            this.InstructionsLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.InstructionsLabel.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InstructionsLabel.Location = new System.Drawing.Point(0, 0);
+            this.InstructionsLabel.ForeColor = System.Drawing.Color.Firebrick;
+            this.InstructionsLabel.Location = new System.Drawing.Point(0, 183);
             this.InstructionsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.InstructionsLabel.Name = "InstructionsLabel";
-            this.InstructionsLabel.Size = new System.Drawing.Size(816, 382);
+            this.InstructionsLabel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 100);
+            this.InstructionsLabel.Size = new System.Drawing.Size(816, 199);
             this.InstructionsLabel.TabIndex = 1;
             this.InstructionsLabel.Text = "Please Do not press anything or click anywhere, some process is going on and it m" +
     "ay cause the computer to overload.";
@@ -48,29 +51,39 @@ namespace ScreenProtect
             // 
             // TitleLabel
             // 
-            this.TitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.BackColor = System.Drawing.Color.Black;
+            this.TitleLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitleLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(202, 19);
+            this.TitleLabel.ForeColor = System.Drawing.Color.Red;
+            this.TitleLabel.Location = new System.Drawing.Point(0, 0);
             this.TitleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(544, 79);
+            this.TitleLabel.Padding = new System.Windows.Forms.Padding(0, 40, 0, 0);
+            this.TitleLabel.Size = new System.Drawing.Size(816, 165);
             this.TitleLabel.TabIndex = 3;
-            this.TitleLabel.Text = "!!! CAUTION !!!";
-            this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.TitleLabel.Text = "!!! CAUTION !!!\r\n\r\n";
+            this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TitleLabel.Click += new System.EventHandler(this.TitleLabel_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(816, 382);
+            this.ControlBox = false;
             this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.InstructionsLabel);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Opacity = 0.7D;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.Text = "Locked";
+            this.TopMost = true;
+            this.TransparencyKey = System.Drawing.Color.Transparent;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
