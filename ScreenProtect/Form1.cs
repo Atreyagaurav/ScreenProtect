@@ -38,8 +38,15 @@ namespace ScreenProtect
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = FormBorderStyle.None;
             this.TopMost = true;
+            this.KeyPreview = true;
         }
-        
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.G)
+            {
+                Form1.ActiveForm.Close();
+            }
+        }
 
     }
 }
