@@ -18,6 +18,10 @@ namespace ScreenProtect
         public Form1()
         {
             InitializeComponent();
+            Form1.WindowState = FormWindowState.Maximized;
+            Form1.FormBorderStyle = FormBorderStyle.None;
+            Form1.TopMost = true;
+            InstructionsLabel.Text = "Please Do not press anything or click anywhere, some process is going on and it may cause the computer to overload.";
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -30,6 +34,11 @@ namespace ScreenProtect
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Thanks!");
+        }
+
+        private void InstructionsLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,61 +28,45 @@ namespace ScreenProtect
         /// </summary>
         private void InitializeComponent()
         {
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.debugInstructionsLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.helloWorldLabel = new System.Windows.Forms.Label();
+            this.InstructionsLabel = new System.Windows.Forms.Label();
+            this.TitleLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // linkLabel1
+            // InstructionsLabel
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(191, 351);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(418, 20);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Click here to continue learning how to build a desktop app!";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.InstructionsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InstructionsLabel.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InstructionsLabel.Location = new System.Drawing.Point(0, 0);
+            this.InstructionsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.InstructionsLabel.Name = "InstructionsLabel";
+            this.InstructionsLabel.Size = new System.Drawing.Size(816, 382);
+            this.InstructionsLabel.TabIndex = 1;
+            this.InstructionsLabel.Text = "Please Do not press anything or click anywhere, some process is going on and it m" +
+    "ay cause the computer to overload.";
+            this.InstructionsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.InstructionsLabel.Click += new System.EventHandler(this.InstructionsLabel_Click);
             // 
-            // debugInstructionsLabel
+            // TitleLabel
             // 
-            this.debugInstructionsLabel.AutoSize = true;
-            this.debugInstructionsLabel.Location = new System.Drawing.Point(146, 107);
-            this.debugInstructionsLabel.Name = "debugInstructionsLabel";
-            this.debugInstructionsLabel.Size = new System.Drawing.Size(532, 20);
-            this.debugInstructionsLabel.TabIndex = 1;
-            this.debugInstructionsLabel.Text = "Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app!";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(325, 240);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 43);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Click Me!";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // helloWorldLabel
-            // 
-            this.helloWorldLabel.AutoSize = true;
-            this.helloWorldLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.helloWorldLabel.Location = new System.Drawing.Point(303, 30);
-            this.helloWorldLabel.Name = "helloWorldLabel";
-            this.helloWorldLabel.Size = new System.Drawing.Size(192, 37);
-            this.helloWorldLabel.TabIndex = 3;
-            this.helloWorldLabel.Text = "Hello World!";
+            this.TitleLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.Font = new System.Drawing.Font("MS Reference Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Location = new System.Drawing.Point(202, 19);
+            this.TitleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(544, 79);
+            this.TitleLabel.TabIndex = 3;
+            this.TitleLabel.Text = "!!! CAUTION !!!";
+            this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.helloWorldLabel);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.debugInstructionsLabel);
-            this.Controls.Add(this.linkLabel1);
+            this.ClientSize = new System.Drawing.Size(816, 382);
+            this.Controls.Add(this.TitleLabel);
+            this.Controls.Add(this.InstructionsLabel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -91,11 +75,8 @@ namespace ScreenProtect
         }
 
         #endregion
-
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label debugInstructionsLabel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label helloWorldLabel;
+        private System.Windows.Forms.Label InstructionsLabel;
+        private System.Windows.Forms.Label TitleLabel;
     }
 }
 
